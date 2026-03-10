@@ -1,32 +1,34 @@
 ---
-title: "Chemometric Analysis for Food Fraud Detection"
+title: "Food Fraud Analysis Practicals"
 subtitle: "FBMFOR — MSc Food Technology and Quality Assurance"
 author: "Department of Food and Nutritional Sciences, University of Reading"
 date: last-modified
 ---
 
+## Chemometric Analysis
+
 ```{=html}
 <div class="launch-buttons">
-  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-chemometrics/blob/main/notebooks/FBMFOR_Chemometrics_Analysis.ipynb" target="_blank" class="btn-colab">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FBMFOR_Chemometrics_Analysis.ipynb" target="_blank" class="btn-colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
   </a>
-  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-chemometrics/main?filepath=notebooks/fbmfor_chemometrics_analysis.ipynb" target="_blank" class="btn-binder">
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/FBMFOR_Chemometrics_Analysis.ipynb" target="_blank" class="btn-binder">
     <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
     Binder (no login required)
   </a>
 </div>
 ```
 
-## About This Notebook
+### About This Notebook
 
 This interactive notebook provides a complete chemometric analysis pipeline for spectroscopic data used in food fraud detection. It is designed for postgraduate students on the FBMFOR module to analyse NMR and FTIR data from their laboratory practicals.
 
 The notebook runs entirely in **Google Colab** — no installation required. Simply click the badge above.
 
-## What You Can Do
+### What You Can Do
 
-### Unsupervised Methods
+#### Unsupervised Methods
 
 **Principal Component Analysis (PCA)**
 : Explore the natural structure of your spectral data. PCA reveals groupings, outliers, and the spectral regions driving variation — all without using class labels. The notebook provides interactive scores plots with 95% confidence ellipses, loadings plots, scree plots, and Hotelling's T² outlier detection.
@@ -34,7 +36,7 @@ The notebook runs entirely in **Google Colab** — no installation required. Sim
 **Hierarchical Cluster Analysis (HCA)**
 : Visualise sample similarity as a dendrogram. Choose from different distance metrics and linkage methods to assess how well your samples cluster by class.
 
-### Supervised Methods
+#### Supervised Methods
 
 **PLS-DA (Partial Least Squares Discriminant Analysis)**
 : Classify samples using their spectral fingerprints. The notebook automatically optimises the number of latent variables via cross-validation and reports confusion matrices, classification accuracy, and VIP scores to identify the most discriminating spectral regions.
@@ -42,7 +44,7 @@ The notebook runs entirely in **Google Colab** — no installation required. Sim
 **OPLS-DA (Orthogonal PLS-DA)**
 : Separate predictive variation from orthogonal (irrelevant) variation for cleaner class separation. Includes S-plots for biomarker identification and permutation testing for model validation.
 
-### Preprocessing
+#### Preprocessing
 
 All standard spectral preprocessing methods are available with adjustable parameters:
 
@@ -54,7 +56,7 @@ All standard spectral preprocessing methods are available with adjustable parame
 | Min-max scaling | Scale to [0, 1] | General |
 | Savitzky-Golay derivatives | Resolve overlapping peaks, remove baseline | FTIR, NIR |
 
-## Data Format
+### Data Format
 
 The notebook accepts **CSV files** with a simple structure:
 
@@ -64,21 +66,60 @@ The notebook accepts **CSV files** with a simple structure:
 
 A **demo dataset** (simulated olive oil FTIR with three classes: EVOO, Refined, Adulterated) is built into the notebook so you can explore the full pipeline immediately.
 
-## How to Use
+### How to Use
 
-1. **Open the notebook** by clicking the Colab badge at the top of this page
+1. **Open the notebook** by clicking the Colab badge at the top of this section
 2. **Run Section 1** (Setup) to load all required libraries
 3. **Run Section 2** (Demo Dataset) to generate the example data, *or* go to Section 3 to upload your own CSV files
 4. **Work through each section** sequentially — modify the clearly labelled parameter blocks (e.g., `NORMALISATION = "snv"`, `PC_X = 1`) and re-run the cell to see the effect
 5. **Export results** (Section 10) to download PCA scores, loadings, and VIP scores as CSV files for your report
 
-## Tips for Your Report
+### Tips for Your Report
 
 - **Always show preprocessing** — include before/after spectra plots and justify your choices
 - **PCA is exploratory** — report the explained variance and describe what you see in the scores plot, but remember it does not use class information
 - **Cross-validate supervised models** — never report calibration accuracy alone; always use the cross-validated results
 - **VIP scores and S-plots** — use these to link your statistical results back to specific chemical features (e.g., particular absorption bands)
 - **Permutation testing** — a p-value < 0.05 confirms your OPLS-DA model is detecting genuine class differences, not overfitting
+
+---
+
+## XRD Starch Analysis
+
+```{=html}
+<div class="launch-buttons">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/XRD_Starch_Analysis.ipynb" target="_blank" class="btn-colab">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+    Google Colab
+  </a>
+</div>
+```
+
+### About This Practical
+
+Starch is a common adulterant in spices, cocoa, and dairy powders. Because different botanical sources produce starches with distinct crystal structures (polymorphs), X-ray diffraction (XRD) provides a rapid fingerprint that can reveal the botanical origin of a starch sample — and detect substitution.
+
+This practical uses real diffractogram data from five starch types: Corn, Wheat, Potato, Tapioca, and an **Unknown** sample. Your task is to identify the Unknown using peak pattern matching.
+
+The notebook loads data directly from GitHub — no file upload needed in Colab.
+
+### What You Will Do
+
+1. **Waterfall plot** — visualise all five diffractograms offset for comparison
+2. **Peak detection** — automated identification of Bragg peaks and assignment to polymorph type (A-type or B-type)
+3. **Relative crystallinity** — estimate the ordered fraction using a Ruland–Vonk integration
+4. **Unknown identification** — match the Unknown peaks against the reference library and determine its botanical origin
+
+### Polymorph Background
+
+| Polymorph | Starches | Key peaks (2θ, Cu Kα) |
+|-----------|----------|----------------------|
+| **A-type** (cereal) | Wheat, Corn | 15.3°, 17.1°, 18.0°, 23.0° |
+| **B-type** (tuber/root) | Potato, Tapioca | 5.6°, 14.4°, 17.2°, 19.8°, 22.2°, 24.0° |
+
+The low-angle peak at ~5–6° is the most diagnostic feature of B-type starches.
+
+---
 
 ## References
 
@@ -88,6 +129,8 @@ A **demo dataset** (simulated olive oil FTIR with three classes: EVOO, Refined, 
 - Wiklund, S. et al. (2008). Visualization of GC/TOF-MS-based metabolomics data using OPLS class models. *Anal. Chem.*, 80(1), 115–122.
 - Eilers, P.H.C. & Boelens, H.F.M. (2005). Baseline correction with asymmetric least squares smoothing.
 - Barnes, R.J., Dhanoa, M.S. & Lister, S.J. (1989). Standard normal variate transformation. *Appl. Spectrosc.*, 43(5), 772–777.
+- Zobel, H.F. (1988). Molecules to granules: a comprehensive starch review. *Starch*, 40(2), 44–50.
+- Imberty, A. et al. (1991). The double-helical nature of the crystalline part of A-starch. *J. Mol. Biol.*, 201, 365–378.
 
 ## Contact
 

@@ -113,7 +113,7 @@ A **demo dataset** (simulated olive oil FTIR with three classes: EVOO, Refined, 
 
 ### About This Practical
 
-Starch is a common adulterant in spices, cocoa, and dairy powders. Because different botanical sources produce starches with distinct crystal structures (polymorphs), X-ray diffraction (XRD) provides a rapid fingerprint that can reveal the botanical origin of a starch sample — and detect substitution.
+Starch is an important ingredient for many foods - and starch from different foods have different properties. Because different botanical sources produce starches with distinct crystal structures (polymorphs), X-ray diffraction (XRD) provides a rapid fingerprint that can reveal the botanical origin of a starch sample — and detect substitution.
 
 This practical uses real diffractogram data from five starch types: Corn, Wheat, Potato, Tapioca, and an **Unknown** sample. Your task is to identify the Unknown using peak pattern matching.
 
@@ -121,10 +121,8 @@ The notebook loads data directly from GitHub — no file upload needed in Colab.
 
 ### What You Will Do
 
-1. **Waterfall plot** — visualise all five diffractograms offset for comparison
-2. **Peak detection** — automated identification of Bragg peaks and assignment to polymorph type (A-type or B-type)
-3. **Relative crystallinity** — estimate the ordered fraction using the method of Nara & Komiya
-4. **Unknown identification** — match the Unknown peaks against the reference library and determine its botanical origin
+**Waterfall plot** — visualise all five diffractograms offset for comparison and analyse the data
+
 
 ### Polymorph Background
 
@@ -139,12 +137,7 @@ The low-angle peak at ~5.6° is the most diagnostic feature of B-type starches �
 
 ## References
 
-- Jolliffe, I.T. (2002). *Principal Component Analysis*, 2nd ed. Springer.
-- Barker, M. & Rayens, W. (2003). Partial least squares for discrimination. *J. Chemometrics*, 17(3), 166–173.
-- Trygg, J. & Wold, S. (2002). Orthogonal projections to latent structures (O-PLS). *J. Chemometrics*, 16(3), 119–128.
-- Wiklund, S. et al. (2008). Visualization of GC/TOF-MS-based metabolomics data for OPLS class models. *Anal. Chem.*, 80(1), 115–122.
-- Eilers, P.H.C. & Boelens, H.F.M. (2005). Baseline correction with asymmetric least squares smoothing.
-- Barnes, R.J., Dhanoa, M.S. & Lister, S.J. (1989). Standard normal variate transformation. *Appl. Spectrosc.*, 43(5), 772–777.
+
 - Dome K, Podgorbunskikh E, Bychkov A, Lomovsky O. Changes in the Crystallinity Degree of Starch Having Different Types of Crystal Structure after Mechanical Pretreatment. *Polymers (Basel)*. 2020 Mar 12;12(3):641. [doi:10.3390/polym12030641](https://doi.org/10.3390/polym12030641). PMID: 32178224; PMCID: PMC7183072.
 
 ---

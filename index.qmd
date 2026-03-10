@@ -106,6 +106,10 @@ A **demo dataset** (simulated olive oil FTIR with three classes: EVOO, Refined, 
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
   </a>
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/XRD_Starch_Analysis.ipynb" target="_blank" class="btn-binder">
+    <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
+    Binder (no login required)
+  </a>
 </div>
 ```
 

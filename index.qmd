@@ -5,6 +5,20 @@ author: "Department of Food and Nutritional Sciences, University of Reading"
 date: last-modified
 ---
 
+## Contents
+
+- [Chemometric Analysis](#chemometric-analysis)
+  - [What You Can Do](#what-you-can-do)
+  - [Data Format](#data-format)
+  - [How to Use](#how-to-use)
+  - [Tips for Your Report](#tips-for-your-report)
+- [XRD Starch Analysis](#xrd-starch-analysis)
+  - [What You Will Do](#what-you-will-do)
+  - [Polymorph Background](#polymorph-background)
+- [References](#references)
+
+---
+
 ## Chemometric Analysis
 
 ```{=html}
@@ -95,6 +109,8 @@ A **demo dataset** (simulated olive oil FTIR with three classes: EVOO, Refined, 
 </div>
 ```
 
+**Data:** [Download xrd.csv](https://raw.githubusercontent.com/ggkuhnle/fbmfor-foodfraud/main/data/xrd.csv)
+
 ### About This Practical
 
 Starch is a common adulterant in spices, cocoa, and dairy powders. Because different botanical sources produce starches with distinct crystal structures (polymorphs), X-ray diffraction (XRD) provides a rapid fingerprint that can reveal the botanical origin of a starch sample — and detect substitution.
@@ -107,17 +123,17 @@ The notebook loads data directly from GitHub — no file upload needed in Colab.
 
 1. **Waterfall plot** — visualise all five diffractograms offset for comparison
 2. **Peak detection** — automated identification of Bragg peaks and assignment to polymorph type (A-type or B-type)
-3. **Relative crystallinity** — estimate the ordered fraction using a Ruland–Vonk integration
+3. **Relative crystallinity** — estimate the ordered fraction using the method of Nara & Komiya
 4. **Unknown identification** — match the Unknown peaks against the reference library and determine its botanical origin
 
 ### Polymorph Background
 
 | Polymorph | Starches | Key peaks (2θ, Cu Kα) |
 |-----------|----------|----------------------|
-| **A-type** (cereal) | Wheat, Corn | 15.3°, 17.1°, 18.0°, 23.0° |
-| **B-type** (tuber/root) | Potato, Tapioca | 5.6°, 14.4°, 17.2°, 19.8°, 22.2°, 24.0° |
+| **A-type** (cereal) | Wheat, Corn | 15.0°, 17.0°, 17.9°, 22.9° |
+| **B-type** (tuber/root) | Potato, Tapioca | 5.6°, 15.1°, 17.2°, 19.7°, 22.2°, 24.0°, 26.4° |
 
-The low-angle peak at ~5–6° is the most diagnostic feature of B-type starches.
+The low-angle peak at ~5.6° is the most diagnostic feature of B-type starches — it is absent in A-type patterns.
 
 ---
 
@@ -126,15 +142,12 @@ The low-angle peak at ~5–6° is the most diagnostic feature of B-type starches
 - Jolliffe, I.T. (2002). *Principal Component Analysis*, 2nd ed. Springer.
 - Barker, M. & Rayens, W. (2003). Partial least squares for discrimination. *J. Chemometrics*, 17(3), 166–173.
 - Trygg, J. & Wold, S. (2002). Orthogonal projections to latent structures (O-PLS). *J. Chemometrics*, 16(3), 119–128.
-- Wiklund, S. et al. (2008). Visualization of GC/TOF-MS-based metabolomics data using OPLS class models. *Anal. Chem.*, 80(1), 115–122.
+- Wiklund, S. et al. (2008). Visualization of GC/TOF-MS-based metabolomics data for OPLS class models. *Anal. Chem.*, 80(1), 115–122.
 - Eilers, P.H.C. & Boelens, H.F.M. (2005). Baseline correction with asymmetric least squares smoothing.
 - Barnes, R.J., Dhanoa, M.S. & Lister, S.J. (1989). Standard normal variate transformation. *Appl. Spectrosc.*, 43(5), 772–777.
-- Zobel, H.F. (1988). Molecules to granules: a comprehensive starch review. *Starch*, 40(2), 44–50.
-- Imberty, A. et al. (1991). The double-helical nature of the crystalline part of A-starch. *J. Mol. Biol.*, 201, 365–378.
+- Dome K, Podgorbunskikh E, Bychkov A, Lomovsky O. Changes in the Crystallinity Degree of Starch Having Different Types of Crystal Structure after Mechanical Pretreatment. *Polymers (Basel)*. 2020 Mar 12;12(3):641. [doi:10.3390/polym12030641](https://doi.org/10.3390/polym12030641). PMID: 32178224; PMCID: PMC7183072.
 
-## Contact
+---
 
-For questions about this notebook or the FBMFOR module:
-
-**Gunter Kuhnle** — g.g.kuhnle@reading.ac.uk
+**Contact:** Gunter Kuhnle — g.g.kuhnle@reading.ac.uk  
 Department of Food and Nutritional Sciences, University of Reading

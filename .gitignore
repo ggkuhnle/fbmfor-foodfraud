@@ -210,4 +210,5 @@ __marimo__/
 
 .claude
 
-slides
+# Slide decks (PDF lecture slides — large files, not version-controlled)
+slides/

@@ -9,6 +9,7 @@
 | Chemometrics Workbook | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FBMFOR_Chemometrics_Analysis.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/FBMFOR_Chemometrics_Analysis.ipynb) | PCA · HCA · PLS-DA · OPLS-DA |
 | XRD Starch Analysis | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/XRD_Starch_Analysis.ipynb) | Polymorph fingerprinting · Unknown identification |
 | FTIR Honey Analysis | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FTIR_Honey_Analysis.ipynb) | Blank correction · Overlay/waterfall plots · PCA |
+| NMR Honey Analysis | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/NMR_Honey_Analysis.ipynb) | Bruker TopSpin · Waterfall plots · Spectral binning · PCA |
 
 ## Getting Started
 
@@ -23,6 +24,8 @@
 **XRD Starch Analysis** — polymorph fingerprinting of starch types (Corn/A-type, Wheat/A-type, Potato/B-type, Tapioca/C-type, Unknown) in a food fraud context. Covers waterfall visualisation, peak detection and assignment, relative crystallinity estimation, and unknown sample identification. Input: `data/xrd.csv` (TwoTheta, Counts, Starch).
 
 **FTIR Honey Analysis** — ATR-FTIR analysis of honey samples for authentication. Reads Perkin-Elmer Spectrum CSV exports directly, applies nearest-blank correction, plots overlay and waterfall spectra with diagnostic band annotations, and runs PCA on the carbohydrate fingerprint region (1800–650 cm⁻¹). Drop new `.csv` files into `data/honey/` and re-run. Input: `data/honey/*.csv`.
+
+**NMR Honey Analysis** — ¹H NMR analysis of honey samples using Bruker TopSpin data. Reads binary `1r` processed spectra directly, displays waterfall plots of reference sugars and unknown honey samples separately, and runs PCA on binned spectral data (0.04 ppm bins, 0.5–9.0 ppm, HDO region excluded). Input: `data/nmr/` (Bruker experiment directories).
 
 ## Reference
 

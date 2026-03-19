@@ -15,9 +15,9 @@ date: last-modified
 - [XRD Starch Analysis](#xrd-starch-analysis)
   - [What You Will Do](#what-you-will-do)
   - [Polymorph Background](#polymorph-background)
-- [FTIR Honey Analysis](#ftir-honey-analysis)
+- [NMR Honey Analysis](#nmr-honey-analysis)
   - [What You Will Do](#what-you-will-do-1)
-  - [Key Spectral Bands](#key-spectral-bands)
+  - [Key Spectral Regions](#key-spectral-regions)
 - [References](#references)
 
 ---
@@ -142,11 +142,11 @@ The low-angle peak at ~5.6° is the most diagnostic feature of B-type starches �
 
 ---
 
-## FTIR Honey Analysis
+## NMR Honey Analysis
 
 ```{=html}
 <div class="launch-buttons">
-  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FTIR_Honey_Analysis.ipynb" target="_blank" class="btn-colab">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/NMR_Honey_Analysis.ipynb" target="_blank" class="btn-colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
   </a>
@@ -155,32 +155,32 @@ The low-angle peak at ~5.6° is the most diagnostic feature of B-type starches �
 
 ### About This Practical
 
-Honey is one of the most frequently adulterated foods globally. ATR-FTIR spectroscopy provides a rapid chemical fingerprint that can reveal differences in sugar composition, botanical origin, and the presence of adulterants such as syrup additions.
+¹H NMR spectroscopy provides a detailed chemical fingerprint of honey composition, capturing the relative abundance of sugars, organic acids, amino acids, and other small molecules. Because different honey types and adulterants have characteristic sugar profiles, NMR is a powerful tool for authentication and fraud detection.
 
-This notebook reads spectra directly from Perkin-Elmer Spectrum CSV exports, applies background correction, and performs PCA-based chemometric analysis on the carbohydrate fingerprint region (1800–650 cm⁻¹).
+This notebook reads Bruker TopSpin processed spectra (binary `1r` files) directly — no conversion needed. It displays the reference sugar spectra alongside the unknown honey samples, then performs PCA on binned spectral data to reveal chemical differences between samples.
 
-The notebook runs in **Google Colab** — upload your `.csv` files and run all cells. No installation required.
+The notebook runs in **Google Colab** and loads data directly from GitHub — no file upload required. Simply click the badge above and run all cells.
 
 ### What You Will Do
 
-**Blank correction** — each sample spectrum is corrected by subtracting the nearest background (blank) spectrum, matched by instrument sample number.
+**Reference spectra** — waterfall plot of pure sugar standards (sucrose, fructose, glucose, and others) for comparison.
 
-**Spectral plots** — overlay and waterfall visualisations of the full range and fingerprint region, with diagnostic band annotations.
+**Sample spectra** — waterfall plot of the honey samples: Greek honey, Golden Syrup, Slovak honey, Honey in Ramekin, and Liquid honey.
 
-**PCA** — scores plot (PC1 vs PC2), loadings plot, and biplot identifying the wavenumber channels driving sample separation.
+**Spectral binning** — spectra are divided into 0.04 ppm bins over 0.5–9.0 ppm; the HDO solvent peak (4.5–5.0 ppm) is excluded before chemometric analysis.
 
-To use your own data, upload Perkin-Elmer Spectrum `.csv` files to `data/honey/`. Files starting with `blank` are automatically used as backgrounds; all other filenames become sample labels.
+**PCA** — scores plot (PC1 vs PC2) and loadings plot using the honey samples only, identifying which spectral regions drive the separation between sample types.
 
-### Key Spectral Bands
+### Key Spectral Regions
 
-| Wavenumber (cm⁻¹) | Assignment |
-|-------------------|-----------|
-| ~1640 | O-H bending (water) |
-| ~1415 | C-H / O-H deformation |
-| ~1155 | C-O-C stretch — sugar rings (sucrose diagnostic) |
-| ~1080 | C-OH stretch — glucose |
-| ~1025 | C-OH stretch — fructose |
-| ~930  | Pyranose / furanose ring vibrations |
+| Chemical shift (ppm) | Assignment |
+|----------------------|-----------|
+| ~5.4 | Anomeric H of α-glucose |
+| ~5.2 | Anomeric H of sucrose / α-fructose |
+| ~4.6 | HDO (excluded) |
+| ~3.2–4.2 | Sugar ring CH / CH₂ protons |
+| ~2.0–2.5 | Organic acids (e.g. acetic acid) |
+| ~1.2 | Methyl groups |
 
 ---
 

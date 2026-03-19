@@ -1,0 +1,11 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2026-03-17 16:30:05.242 +0000  nmrsu@DESKTOP-4FE858S
+$$ C:/Bruker/TopSpin3.6.5/data/rmk_av500/nmr/2026_03_17_metabolomicsWORKSHOP_DATA/40/pdata/1/assocs
+$$ process C:\Bruker\TopSpin3.6.5\prog\mod\dataserver.exe
+##$MULTDISP= <C:/Bruker/TopSpin3.6.5/data/rmk_av500/nmr/2026_03_17_metabolomicsWORKSHOP_DATA/10/pdata/1>
+##END=

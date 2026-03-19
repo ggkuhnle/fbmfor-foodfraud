@@ -1,0 +1,25 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ C:/Bruker/TopSpin3.6.5/data/rmk_av500/nmr/2026_03_17_metabolomicsWORKSHOP_DATA/40/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2026-03-17 16:41:12.452 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID 'e408f34c-221d-11f1-9ee3-0492265c7be2'
+       started at 2026-03-17 16:25:20.069 +0000,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2026-03-17 16:41:12.452 +0000
+
+       configuration hash MD5:
+       80 5B FB 8B 77 49 48 F5 F4 D6 BC BC 30 62 FA 92
+       data hash MD5: 64K
+       EF 40 60 9E 0D 0C F9 E5 A6 0B DF 4E F8 F8 E8 19>)
+(   2,<2026-03-17 16:51:08.825 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<proc1d>,<TopSpin 3.6.5>,
+      <Start of raw data processing
+       efp LB = 0.1 FT_mod = 6 PKNL = 1 PHC0 = 135.0114 PHC1 = 1.275097 SI = 256K 
+       data hash MD5: 256K
+       D1 41 03 DF 0F 79 AA 1D A9 E6 4F 9F 2E E5 40 84>)
+##END=
+
+$$ hash MD5
+$$ 23 19 1C 03 D4 49 43 59 7D B9 00 85 4E D3 ED 6B

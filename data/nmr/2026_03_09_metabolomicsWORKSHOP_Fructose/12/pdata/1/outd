@@ -1,0 +1,16 @@
+##TITLE= Parameter file, TopSpin 3.6.5
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2026-03-09 12:52:26.739 +0000  nmrsu@DESKTOP-4FE858S
+$$ C:\Bruker\TopSpin3.6.5\data\rmk_av500\nmr/2026_03_09_metabolomicsWORKSOP/12/pdata/1/outd
+$$ process C:\Bruker\TopSpin3.6.5\prog\mod\edparproc.exe
+##$CURPLOT= <HP Universal Printing PCL 6>
+##$CURPRIN= <$HP Universal Printing PCL 6>
+##$DFORMAT= <normdp>
+##$LAYOUT= <+/1D_H.xwp>
+##$LFORMAT= <normlp>
+##$PFORMAT= <normpl>
+##END=

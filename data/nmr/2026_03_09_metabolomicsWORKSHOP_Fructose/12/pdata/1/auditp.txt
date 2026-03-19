@@ -1,0 +1,33 @@
+##TITLE= Audit trail, TopSpin 3.6.5
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ C:/Bruker/TopSpin3.6.5/data/rmk_av500/nmr/2026_03_09_metabolomicsWORKSOP/12/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2026-03-09 12:54:56.902 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<go4>,<TopSpin 3.6.5>,
+      <created by zg on data set with UUID 'd6233746-1bb6-11f1-8499-0492265c7be2'
+       started at 2026-03-09 12:52:31.613 +0000,
+       POWCHK enabled, PULCHK disabled,
+       completed at 2026-03-09 12:54:56.887 +0000
+
+       configuration hash MD5:
+       80 5B FB 8B 77 49 48 F5 F4 D6 BC BC 30 62 FA 92
+       data hash MD5: 64K
+       89 39 08 3B D5 E7 7E 08 D7 45 B2 B9 E5 3E 1A AB>)
+(   2,<2026-03-09 12:55:08.759 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<proc1d>,<TopSpin 3.6.5>,
+      <Start of raw data processing
+       efp LB = 0.1 FT_mod = 6 PKNL = 1 PHC0 = 105.5082 PHC1 = -0.6545668 SI = 256K 
+       data hash MD5: 256K
+       55 75 9B 3B 27 14 CD 6F A0 32 E0 A7 96 06 81 09>)
+(   3,<2026-03-09 13:06:26.751 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<dataserver>,<TopSpin 3.6.5>,
+      <Spectrum calibrated, SF was set. Old value: 500.130004 New value: 500.129957. Peak list modified: Yes
+       data hash MD5: 256K
+       55 75 9B 3B 27 14 CD 6F A0 32 E0 A7 96 06 81 09>)
+(   4,<2026-03-09 13:06:26.751 +0000>,<nmrsu>,<DESKTOP-4FE858S>,<dataserver>,<TopSpin 3.6.5>,
+      <Spectrum calibrated, OFFSET was set. Old value: 12.691760 New value: 12.785487. Peak list modified: Yes
+       data hash MD5: 256K
+       55 75 9B 3B 27 14 CD 6F A0 32 E0 A7 96 06 81 09>)
+##END=
+
+$$ hash MD5
+$$ F6 84 82 52 49 85 5F 07 22 13 40 03 C0 20 40 D5

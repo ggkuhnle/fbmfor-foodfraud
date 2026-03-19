@@ -171,16 +171,6 @@ The notebook runs in **Google Colab** and loads data directly from GitHub — no
 
 **PCA** — scores plot (PC1 vs PC2) and loadings plot using the honey samples only, identifying which spectral regions drive the separation between sample types.
 
-### Key Spectral Regions
-
-| Chemical shift (ppm) | Assignment |
-|----------------------|-----------|
-| ~5.4 | Anomeric H of α-glucose |
-| ~5.2 | Anomeric H of sucrose / α-fructose |
-| ~4.6 | HDO (excluded) |
-| ~3.2–4.2 | Sugar ring CH / CH₂ protons |
-| ~2.0–2.5 | Organic acids (e.g. acetic acid) |
-| ~1.2 | Methyl groups |
 
 ---
 

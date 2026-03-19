@@ -212,3 +212,5 @@ __marimo__/
 
 # Slide decks (PDF lecture slides — large files, not version-controlled)
 slides/
+
+data/processed

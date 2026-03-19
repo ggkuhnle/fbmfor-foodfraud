@@ -167,6 +167,8 @@ The notebook runs in **Google Colab** and loads data directly from GitHub — no
 
 **Sample spectra** — waterfall plot of the honey samples: Greek honey, Golden Syrup, Slovak honey, Honey in Ramekin, and Liquid honey.
 
+**Glucose/Fructose ratio** — quantitative estimation of the fructose-to-glucose ratio using NMR peak integrals. Glucose is measured from its two anomeric doublets (α-Glc at ~5.22 ppm and β-Glc at ~4.63 ppm); fructose from the 4.0–4.4 ppm region. Typical honey has a Fru/Glc ratio greater than 1; adulteration with high-fructose syrup tends to shift this ratio.
+
 **Spectral binning** — spectra are divided into 0.04 ppm bins over 0.5–9.0 ppm; the HDO solvent peak (4.5–5.0 ppm) is excluded before chemometric analysis.
 
 **PCA** — scores plot (PC1 vs PC2) and loadings plot using the honey samples only, identifying which spectral regions drive the separation between sample types.

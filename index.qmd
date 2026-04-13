@@ -159,6 +159,10 @@ The low-angle peak at ~5.6° is the most diagnostic feature of B-type starches �
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
   </a>
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/NMR_Honey_Analysis.ipynb" target="_blank" class="btn-binder">
+    <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
+    Binder (no login required)
+  </a>
 </div>
 ```
 
@@ -176,7 +180,7 @@ The notebook runs in **Google Colab** and loads data directly from GitHub — no
 
 **Sample spectra** — waterfall plot of the honey samples: Greek honey, Golden Syrup, Slovak honey, Honey in Ramekin, and Liquid honey.
 
-**Glucose/Fructose ratio** — quantitative estimation of the fructose-to-glucose ratio using NMR peak integrals. Glucose is measured from its two anomeric doublets (α-Glc at ~5.22 ppm and β-Glc at ~4.63 ppm); fructose from the 4.0–4.4 ppm region. Typical honey has a Fru/Glc ratio greater than 1; adulteration with high-fructose syrup tends to shift this ratio.
+**Glucose/Fructose ratio** — semi-quantitative estimation of the fructose-to-glucose ratio using NMR peak integrals. Glucose is measured from its two anomeric windows (α-Glc at ~5.22 ppm and β-Glc at ~4.63 ppm); fructose from two narrow windows centred at ~4.10 ppm and ~4.00 ppm. Typical honey has a Fru/Glc ratio greater than 1, but the value should be interpreted as a diagnostic estimate rather than an absolute concentration ratio.
 
 **Spectral binning** — spectra are divided into 0.04 ppm bins over 0.5–9.0 ppm; the HDO solvent peak (4.5–5.0 ppm) is excluded before chemometric analysis.
 
@@ -192,6 +196,10 @@ The notebook runs in **Google Colab** and loads data directly from GitHub — no
   <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FTIR_Honey_Analysis.ipynb" target="_blank" class="btn-colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
+  </a>
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/FTIR_Honey_Analysis.ipynb" target="_blank" class="btn-binder">
+    <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
+    Binder (no login required)
   </a>
 </div>
 ```
@@ -230,6 +238,10 @@ The spectra are already baseline-corrected by the instrument software. Sample ID
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
   </a>
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/IRMS_Olive_Oil_Origin.ipynb" target="_blank" class="btn-binder">
+    <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
+    Binder (no login required)
+  </a>
 </div>
 ```
 
@@ -266,6 +278,10 @@ This notebook reads `data/irms/irms.csv` (long format: Sample / delta / IR), piv
   <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/SEM_Food_Microscopy.ipynb" target="_blank" class="btn-colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
     Google Colab
+  </a>
+  <a href="https://mybinder.org/v2/gh/ggkuhnle/fbmfor-foodfraud/main?filepath=notebooks/SEM_Food_Microscopy.ipynb" target="_blank" class="btn-binder">
+    <img src="https://mybinder.org/badge_logo.svg" alt="Open in Binder">
+    Binder (no login required)
   </a>
 </div>
 ```

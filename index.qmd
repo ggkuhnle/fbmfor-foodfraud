@@ -18,6 +18,15 @@ date: last-modified
 - [NMR Honey Analysis](#nmr-honey-analysis)
   - [What You Will Do](#what-you-will-do-1)
   - [Key Spectral Regions](#key-spectral-regions)
+- [FTIR Honey Analysis](#ftir-honey-analysis)
+  - [What You Will Do](#what-you-will-do-2)
+  - [Fingerprint Region](#fingerprint-region)
+- [IRMS Olive Oil Origin](#irms-olive-oil-origin)
+  - [What You Will Do](#what-you-will-do-3)
+  - [Isotope Systems](#isotope-systems)
+- [SEM Food Microscopy](#sem-food-microscopy)
+  - [What You Will Do](#what-you-will-do-4)
+  - [Image Statistics](#image-statistics)
 - [References](#references)
 
 ---
@@ -176,10 +185,127 @@ The notebook runs in **Google Colab** and loads data directly from GitHub — no
 
 ---
 
+## FTIR Honey Analysis
+
+```{=html}
+<div class="launch-buttons">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/FTIR_Honey_Analysis.ipynb" target="_blank" class="btn-colab">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+    Google Colab
+  </a>
+</div>
+```
+
+### About This Practical
+
+ATR-FTIR spectroscopy produces a detailed chemical fingerprint of honey composition in minutes. This notebook reads Perkin-Elmer Spectrum CSV exports from `data/ftir/`, converts %T to absorbance, and analyses the carbohydrate fingerprint region (1800–650 cm⁻¹).
+
+The spectra are already baseline-corrected by the instrument software. Sample IDs are derived automatically from filenames.
+
+### What You Will Do {#what-you-will-do-2}
+
+**Overlay and waterfall plots** — visualise all honey spectra simultaneously and offset for individual comparison, with diagnostic band annotations (H₂O bend at 1640 cm⁻¹, fructose C-OH at 1095/1053 cm⁻¹, glucose C-OH at 1032 cm⁻¹, ring vibrations at 892 cm⁻¹).
+
+**Fingerprint region zoom** — focus on 1800–650 cm⁻¹ where the most diagnostic sugar bands appear.
+
+**PCA** — scores plot, loadings plot, and biplot using the fingerprint region, revealing which wavenumber channels drive differences between honey samples.
+
+### Fingerprint Region
+
+| Band (cm⁻¹) | Assignment |
+|-------------|-----------|
+| 1640 | H₂O bending |
+| 1095 | C-OH stretch (fructose) |
+| 1053 | C-OH stretch (fructose) |
+| 1032 | C-OH stretch (glucose) |
+| 892 | Ring vibrations (sugars) |
+
+---
+
+## IRMS Olive Oil Origin
+
+```{=html}
+<div class="launch-buttons">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/IRMS_Olive_Oil_Origin.ipynb" target="_blank" class="btn-colab">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+    Google Colab
+  </a>
+</div>
+```
+
+### About This Practical
+
+Stable isotope ratio mass spectrometry (IRMS) measures the natural abundance of heavy isotopes in food. Because isotope ratios reflect geography (precipitation, temperature) and agricultural practice (fertilisation, irrigation), IRMS is widely used by food standards agencies to verify geographic origin claims and detect adulteration.
+
+This notebook reads `data/irms/irms.csv` (long format: Sample / delta / IR), pivots it to wide format, and compares the olive oil samples against published reference regions for Mediterranean-origin extra-virgin olive oils.
+
+### What You Will Do {#what-you-will-do-3}
+
+**δ²H vs δ¹⁸O origin map** — plot each sample against published ±1 SD reference ellipses for Italy, Spain, Greece, and Tunisia. Both hydrogen and oxygen isotopes track the meteoric water at the growing site; Italian oils cluster at lower δ¹⁸O than other Mediterranean origins.
+
+**δ¹³C strip plot** — C3 oils (olive, sunflower, rapeseed; −32 to −22‰) are clearly separated from C4 adulterants (corn oil; −16 to −9‰). Even 5–10% corn oil addition is detectable.
+
+**Nearest-centroid assignment** — normalised Euclidean distance in δ²H/δ¹⁸O space assigns each sample to the closest reference region, with flagging of ambiguous assignments.
+
+### Isotope Systems
+
+| Isotope ratio | Reference scale | Key application |
+|---------------|----------------|----------------|
+| δ²H (‰) | VSMOW | Geographic origin (precipitation signal) |
+| δ¹⁸O (‰) | VSMOW | Geographic origin (primary discriminant for Italy) |
+| δ¹³C (‰) | VPDB | C3/C4 adulteration detection |
+
+> Torres-Cobos et al. (2025) *Food Chem.* doi:10.1016/j.foodchem.2024.141998
+
+---
+
+## SEM Food Microscopy
+
+```{=html}
+<div class="launch-buttons">
+  <a href="https://colab.research.google.com/github/ggkuhnle/fbmfor-foodfraud/blob/main/notebooks/SEM_Food_Microscopy.ipynb" target="_blank" class="btn-colab">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab">
+    Google Colab
+  </a>
+</div>
+```
+
+### About This Practical
+
+Scanning electron microscopy (SEM) reveals food microstructure at sub-micron resolution, making it possible to identify individual starch granules, pollen grains, or adulterant particles that are indistinguishable by bulk chemical methods. This notebook loads 16-bit greyscale TIFF images from `data/sem/`, organises them by sample code, and extracts quantitative texture statistics.
+
+Eight sample groups are included (CMA, CMB, CoA, CoB, GM, GMS, NB, sand), each with four fields of view.
+
+### What You Will Do {#what-you-will-do-4}
+
+**Contact-sheet gallery** — display all images grouped by sample with a shared greyscale scale per group, so brightness differences between fields of view are immediately apparent.
+
+**Image statistics table** — per-image mean intensity, standard deviation, coefficient of variation (CV), and pixel dimensions.
+
+**CV bar chart** — compare texture heterogeneity across all sample groups. Sand shows the highest CV (most heterogeneous surface), while processed starches tend to be more uniform.
+
+**Intensity histograms** — pixel-value distributions reveal whether each sample is uniform (narrow, symmetric peak) or heterogeneous (broad or bimodal distribution).
+
+### Image Statistics
+
+| Statistic | Meaning |
+|-----------|---------|
+| Mean intensity | Overall brightness — lower = denser / darker material |
+| SD | Standard deviation — proxy for local contrast |
+| CV (%) | SD / mean × 100 — normalised texture, comparable across brightnesses |
+
+---
+
 ## References
 
 
 - Dome K, Podgorbunskikh E, Bychkov A, Lomovsky O. Changes in the Crystallinity Degree of Starch Having Different Types of Crystal Structure after Mechanical Pretreatment. *Polymers (Basel)*. 2020 Mar 12;12(3):641. [doi:10.3390/polym12030641](https://doi.org/10.3390/polym12030641). PMID: 32178224; PMCID: PMC7183072.
+
+- Torres-Cobos B et al. Discrimination of Italian and non-Italian virgin olive oils by stable isotope ratio analysis. *Food Chemistry*. 2025. [doi:10.1016/j.foodchem.2024.141998](https://doi.org/10.1016/j.foodchem.2024.141998)
+
+- Bontempo L et al. Multi-element (H, C, N, O, S) stable isotope ratio analysis for determining the geographical origin of Italian extra-virgin olive oils. *Food Control*. 2019;98:482–489. [doi:10.1016/j.foodcont.2018.11.038](https://doi.org/10.1016/j.foodcont.2018.11.038)
+
+- Szaniawska A et al. Data-Driven FTIR Spectroscopy for the Discrimination of Nectars. *Molecules*. 2025;30(20):4083. [doi:10.3390/molecules30204083](https://doi.org/10.3390/molecules30204083)
 
 ---
 

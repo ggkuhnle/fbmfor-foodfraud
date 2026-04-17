@@ -31,14 +31,9 @@
 
 **IRMS Olive Oil Origin** — stable isotope ratio analysis for geographic origin verification and adulteration detection. Loads long-format CSV (Sample/delta/IR columns), pivots to wide, plots δ²H vs δ¹⁸O against published Mediterranean reference ellipses (Italy, Spain, Greece, Tunisia), and a δ¹³C C3/C4 adulteration strip. Nearest-centroid assignment with ambiguity flagging. Input: `data/irms/irms.csv`.
 
-**SEM Food Microscopy** — scanning electron microscopy image analysis. Loads 16-bit greyscale TIFFs grouped by sample code, displays a contact-sheet gallery, and computes per-image statistics (mean intensity, SD, CV) as texture proxies. CV bar chart and pixel-distribution histograms compare microstructural heterogeneity across samples. Input: `data/sem/*.tif`.
+**SEM Food Microscopy** — scanning electron microscopy image analysis. Loads 16-bit greyscale TIFFs grouped by sample code, displays a contact-sheet gallery. Input: `data/sem/*.tif`.
 
-## References
 
-- Dome K et al. Changes in the Crystallinity Degree of Starch Having Different Types of Crystal Structure after Mechanical Pretreatment. *Polymers (Basel)*. 2020;12(3):641. [doi:10.3390/polym12030641](https://doi.org/10.3390/polym12030641)
-- Torres-Cobos B et al. Discrimination of Italian and non-Italian virgin olive oils by stable isotope ratio analysis. *Food Chemistry*. 2025. [doi:10.1016/j.foodchem.2024.141998](https://doi.org/10.1016/j.foodchem.2024.141998)
-- Bontempo L et al. Multi-element stable isotope ratio analysis for determining the geographical origin of Italian extra-virgin olive oils. *Food Control*. 2019;98:482–489. [doi:10.1016/j.foodcont.2018.11.038](https://doi.org/10.1016/j.foodcont.2018.11.038)
-- Szaniawska A et al. Data-Driven FTIR Spectroscopy for the Discrimination of Nectars. *Molecules*. 2025;30(20):4083. [doi:10.3390/molecules30204083](https://doi.org/10.3390/molecules30204083)
 
 ---
 
